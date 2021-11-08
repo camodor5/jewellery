@@ -1,0 +1,45 @@
+.blog {
+  padding-top: 125px;
+}
+
+.blog__title {
+  margin-top: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  line-height: 44px;
+  margin-bottom: 30;
+}
+
+.blog p {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  width: fit-content;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  position: relative;
+}
+
+.blog p::before {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 1px;
+  background-color: $brown-light;
+  position: absolute;
+  bottom: 1px;
+  left: 0px;
+}
+
+.blog__list {
+  display: grid;
+  padding: 0;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  max-width: $content;
+  margin: 0 auto;
+  list-style: none;
+}
+

@@ -1,0 +1,71 @@
+.header__top {
+  padding-left: 98px;
+  padding-right: 98px;
+  margin: 0 auto;
+  max-width: $desktop-width;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Padding сверху и снизу от header__search и header__login
+ставлю на 6 px меньше чем в макете, потому что там мерят по блоку высотой 10px, а на практике это 21px */
+
+.header__search {
+  width: 169px;
+  padding-left: 29px;
+  padding-top: 41px;
+  padding-bottom: 52px;
+  position: relative;
+}
+
+.header__search::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-image: url("../../img/icon-search.svg");
+  position: absolute;
+  left: 0px;
+  top: 45px;
+}
+
+.header__search input {
+  border: none;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+.header__search input::placeholder {
+  color: $grey1;
+}
+
+.header__logo {
+  padding-top: 30px;
+}
+
+.header__login {
+  width: 169px;
+  text-align: right;
+  padding-top: 41px;
+  padding-bottom: 52px;
+}
+
+.header__login span {
+  margin-left: 5px;
+}
+
+.header__login a {
+  margin-right: 30px;
+  border: none;
+  background: none;
+}
+
+.header__login a:hover, .header__login span:hover {
+  color: $grey1;
+}
+
+
+.header__bottom {
+  border-top: 1px solid $light-grey;
+}

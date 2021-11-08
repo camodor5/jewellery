@@ -1,0 +1,19 @@
+.card {
+  width: max-content;
+  max-width: 270px;
+}
+
+.card p {
+  margin: 0;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 12px;
+}
+
+.card span {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+}

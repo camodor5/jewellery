@@ -1,0 +1,51 @@
+.new {
+  padding-top: 125px;
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.new__title {
+  margin-top: 0;
+  text-align: center;
+  font-family: "Cormorant Garamond", Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  line-height: 44px;
+  margin-bottom: 0;
+}
+
+.new__span {
+  display: block;
+  margin: 0 auto;
+  width: 87px;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  position: absolute;
+  top: 187px;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.new__span::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 1px;
+  background-color: $brown-light;
+  position: absolute;
+  bottom: 1px;
+  left: 3px;
+}
+
+.new__list {
+  list-style: none;
+  margin: 107px auto;
+  margin-bottom: 55px;
+  max-width: $content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 0;
+}
