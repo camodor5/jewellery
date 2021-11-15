@@ -5,6 +5,10 @@
   top: 0px;
   left: 0px;
   z-index: 10;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }
 
 .swiper-next {
@@ -13,6 +17,10 @@
   position: absolute;
   top: 0px;
   right: 0px;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }
 
 .swiper-button-disabled {

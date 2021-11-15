@@ -3,6 +3,14 @@
   max-width: 1170px;
   margin: 0 auto;
   position: relative;
+  @media (max-width: $tablet-width) {
+    width: 678px;
+    padding-top: 74px;
+  }
+  @media (max-width: $mobile-width) {
+    width: 290px;
+    padding-top: 64px;
+  }
 }
 
 .new__title {
@@ -26,6 +34,9 @@
   left: 50%;
   transform: translateX(-50%);
 
+  @media (max-width: $tablet-width) {
+    top: 127px;
+  }
 }
 
 .new__span::before {
