@@ -1,8 +1,17 @@
 .card {
-  width: max-content;
   max-width: 270px;
   @media (max-width: $tablet-width) {
     max-width: 324px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: min-content;
+  }
+}
+
+.card--catalog {
+  @media (max-width: $tablet-width) {
+    max-width: 206px;
   }
 
   @media (max-width: $mobile-width) {
@@ -21,21 +30,47 @@
 
 }
 
+
+.card__img-wrapper--catalog {
+
+  width: 100%;
+  height: 272px;
+  @media (max-width: $tablet-width) {
+    width: 206px;
+    height: 208px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 130px;
+    height: 136px;
+  }
+}
+
+.card__img-wrapper--catalog img {
+  height: 100%;
+}
+
 .card img {
   width: 100%;
-  height: auto;
 }
 
 .card p {
   margin: 0;
   text-align: center;
-  padding-top: 25px;
-  padding-bottom: 12px;
+  padding-top: 24px;
+  padding-bottom: 7px;
 
   @media (max-width: $mobile-width) {
     width: 130px;
     font-size: 16px;
     line-height: 21px;
+  }
+}
+
+.card--catalog p {
+  @media (max-width: $mobile-width) {
+    padding-top: 15px;
+    padding-bottom: 8px;
   }
 }
 

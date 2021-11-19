@@ -1,0 +1,149 @@
+.login {
+  width: 430px;
+  padding: 0 0 55px;
+  background-color: $sand;
+  margin: 0 auto;
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    width: 442px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 270px;
+    padding: 0 0 40px;
+  }
+}
+
+.login__header {
+  height: 138px;
+  background-image: url("../../img/login-bg.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url("../../img/login-bg@2x.jpg");
+  }
+  @media (max-width: $mobile-width) {
+    height: 84px;
+  }
+}
+
+.login h2 {
+  text-align: center;
+  font-size: 34px;
+  line-height: 44px;
+  font-family: "Cormorant Garamond", Arial, sans-serif;
+  margin-top: 50px;
+  margin-bottom: 35px;
+  @media (max-width: $mobile-width) {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+}
+
+.login__form {
+  padding: 0 45px;
+  @media (max-width: $tablet-width) {
+    padding: 0 51px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0 15px;
+  }
+}
+
+.login__form input {
+  border: none;
+  line-height: 21px;
+  font-size: 14px;
+  width: 100%;
+  background: transparent;
+  position: relative;
+  display: block;
+  padding-bottom: 9px;
+  border-bottom: 1px solid $black;
+  cursor: pointer;
+}
+
+.login__email {
+  margin-bottom: 55px;
+}
+
+.login__form input::placeholder {
+  color: $grey1;
+}
+
+.login__forgot-password {
+  display: block;
+  margin-left: auto;
+  width: fit-content;
+  color: $grey1;
+  padding-top: 5px;
+  line-height: 18px;
+  font-size: 12px;
+}
+
+.login__button {
+  width: 100%;
+  padding: 28px;
+  background-color: $brown;
+  display: block;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 21px;
+  margin-top: 45px;
+  margin-bottom: 15px;
+}
+
+.login__sign-up-span {
+  display: block;
+  color: $grey1;
+  text-align: center;
+  width: 100%;
+}
+
+.login__close {
+  display: block;
+  background-color: transparent;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 20px;
+  right: 20px;
+  background-image: url('../../img/icon-close-transparent-bg.svg');
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.login__close:hover {
+  outline: 1px solid $black;
+}
+
+.login--js {
+  display: none;
+}
+
+.login__overlay {
+  display: none;
+}
+
+.login__overlay--popup-opened {
+  display: block;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: $white;
+  position: fixed;
+}
+
+.login--popup-opened {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}

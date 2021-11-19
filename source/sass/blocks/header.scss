@@ -25,7 +25,7 @@
   width: fit-content;
   cursor: pointer;
   @media (max-width: $tablet-width) {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     path {
       fill: $white;
     }
@@ -158,3 +158,9 @@
   }
 }
 
+.header__login-back {
+  margin: 0 auto;
+  display: block;
+  padding: 25px;
+  width: fit-content;
+}

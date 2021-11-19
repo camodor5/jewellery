@@ -5,7 +5,7 @@
   padding-bottom: 100px;
 
   @media (max-width: $tablet-width) {
-    padding: 60px 45px 40px;
+    padding: 62px 45px 40px;
   }
 
   @media (max-width: $mobile-width) {
@@ -25,25 +25,28 @@
   @media (max-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 560px;
+    width: 573px;
     margin-left: 0;
     padding: 0;
   }
 
   @media (max-width: $mobile-width) {
     width: 100%;
-    max-width: 560px;
+    max-width: 573px;
   }
 }
 
 .footer__form {
   position: relative;
-  width: fit-content;
+  width: auto;
+  flex-grow: 2;
+  max-width: 500px;
   margin-bottom: auto;
   padding-bottom: 10px;
 
   @media (max-width: $tablet-width) {
-    width: 100%;
+    width: 98%;
+    max-width: unset;
     margin-bottom: 50px;
   }
 }
@@ -56,14 +59,17 @@
   height: 1px;
   bottom: 0;
   background-color: $white;
+  @media (max-width: $tablet-width) {
+    width: 98%;
+  }
 }
 
 .footer__form h2 {
   font-family: "Cormorant Garamond", Arial, sans-serif;
   font-size: 34px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   line-height: 34px;
-  margin-top: -10px;
+  margin-top: -7px;
   margin-bottom: 10px;
 }
 
@@ -72,6 +78,9 @@
   color: $grey1;
   margin-top: 0px;
   margin-bottom: 45px;
+  @media (max-width: $tablet-width) {
+    margin-top: 15px;
+  }
 }
 
 .footer__form input {
@@ -79,6 +88,7 @@
   border: none;
   color: $white;
   width: 70%;
+
 }
 
 .footer__form input:hover {
@@ -104,6 +114,10 @@
   justify-content: space-between;
   padding: 0;
   cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    right: 13px;
+  }
 }
 
 .footer__form button:hover {
@@ -120,7 +134,7 @@
   line-height: 21px;
   display: flex;
   flex-direction: row;
-  width: 32.5%;
+  width: 30%;
   justify-content: space-between;
   @media (max-width: $tablet-width) {
     width: 63.92%;
@@ -165,6 +179,7 @@
 }
 
 .footer li {
+  margin-bottom: 20px;
   @media (max-width: $tablet-width) {
     margin-bottom: 20px;
   }
@@ -177,6 +192,7 @@
 
 .footer__social li {
   position: relative;
+  padding-left: 30px;
   @media (max-width: $mobile-width) {
     margin-right: 30px;
   }
@@ -184,7 +200,7 @@
 
 .footer__social svg {
   position: absolute;
-  left: -30px;
+  left: 0px;
   @media (max-width: $mobile-width) {
     position: unset;
   }
@@ -197,5 +213,5 @@
 }
 
 .footer__fb svg {
-  left: -26px;
+  left: 4px;
 }

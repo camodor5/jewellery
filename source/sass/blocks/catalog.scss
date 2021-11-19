@@ -1,0 +1,143 @@
+.catalog {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    padding: 50px 45px;
+  }
+
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    padding: 40px 15px;
+  }
+}
+
+.catalog__button {
+  display: none;
+  @media (max-width: $tablet-width) {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: $white;
+    background-color: $brown;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border: none;
+    margin-bottom: 50px;
+
+  }
+  @media (max-width: $mobile-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.catalog__filter {
+  max-width: 250px;
+  flex-grow: 2;
+}
+
+
+.catalog__slider {
+  margin-left: auto;
+  max-width: 870px;
+  padding-bottom: 80px;
+  position: relative;
+  flex-grow: 1;
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+  }
+}
+
+.catalog__list {
+  max-width: 870px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 40px;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 35px;
+    grid-row-gap: 36px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    grid-row-gap: 26px;
+  }
+
+}
+
+.catalog__prev {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  @media (max-width: $tablet-width) {
+   bottom: 25px;
+  }
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.catalog__next {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  @media (max-width: $tablet-width) {
+    bottom: 25px;
+  }
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.catalog__pagination {
+  position: absolute;
+  bottom: 0px;
+  right: 50%;
+  transform: translateX(50%);
+  @media (max-width: $tablet-width) {
+    bottom: 25px;
+   }
+}
+
+.catalog__pagination span {
+  margin-right: 10px;
+}
+
+.catalog__wrapper {
+  position: relative;
+}
+
+.catalog__wrapper::before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100vw;
+  bottom: 132px;
+  left: 0;
+  position: absolute;
+  background-color: $light-grey;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+

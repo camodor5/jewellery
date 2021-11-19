@@ -2,13 +2,48 @@
   padding-top: 195px;
   padding-bottom: 194px;
   text-align: center;
-  background-image: url("../../img/intro.jpg");
+  background-color: $brown;
+  background-image: url("../../img/intro.webp");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    background-image: url("../../img/intro@2x.jpg");
+    background-image: url("../../img/intro@2x.webp");
   }
+}
+
+.intro--catalog {
+  padding-top: 92px;
+  padding-bottom: 92px;
+  background-image: url("../../img/intro-catalog-bg.webp");
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url("../../img/intro-catalog-bg@2x.webp");
+  }
+
+  @media(max-width: $mobile-width) {
+    padding-top: 78px;
+    padding-bottom: 85px;
+  }
+}
+
+.intro--catalog .intro__title--catalog {
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0;
+}
+
+
+.intro--catalog .intro__description {
+  margin-top: 2px;
+  font-size: 22px;
+  line-height: 29px;
+  @media (max-width: $mobile-width) {
+    padding-left: 37px;
+    padding-right: 37px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
 }
 
 .intro::before {
@@ -44,4 +79,11 @@
   line-height: 49px;
   position: relative;
   z-index: 2;
+
+  @media (max-width: $mobile-width) {
+    padding-left: 37px;
+    padding-right: 37px;
+  }
+
 }
+
