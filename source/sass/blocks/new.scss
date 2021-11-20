@@ -1,15 +1,15 @@
 .new {
-  padding-top: 125px;
+  padding-top: 120px;
   max-width: 1170px;
   margin: 0 auto;
   position: relative;
   @media (max-width: $tablet-width) {
     width: 678px;
-    padding-top: 74px;
+    padding-top: 70px;
   }
   @media (max-width: $mobile-width) {
     width: 290px;
-    padding-top: 64px;
+    padding-top: 60px;
   }
 }
 
@@ -35,7 +35,11 @@
   transform: translateX(-50%);
 
   @media (max-width: $tablet-width) {
-    top: 127px;
+    top: 132px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 124px;
   }
 }
 
@@ -46,17 +50,27 @@
   height: 1px;
   background-color: $brown-light;
   position: absolute;
-  bottom: 1px;
+  bottom: -3px;
   left: 3px;
 }
 
 .new__list {
   list-style: none;
-  margin: 107px auto;
-  margin-bottom: 55px;
+  margin: 105px auto;
+  margin-bottom: 50px;
   max-width: $content;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-left: 0;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 95px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 85px;
+    margin-bottom: 34px;
+  }
 }

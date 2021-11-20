@@ -74,6 +74,7 @@
 
   @media (max-width: $mobile-width) {
     width: 100%;
+    height: unset;
   }
 }
 
@@ -88,11 +89,32 @@
   }
 }
 
+.article__article--big span {
+  @media (max-width: $tablet-width) {
+    margin-top: 90px;
+  }
+  @media (max-width: $mobile-width) {
+    margin-top: 63px;
+  }
+}
+
 .article__article h3 {
   font-family: "Cormorant Garamond", Arial, sans-serif;
   font-weight: 600;
   font-size: 26px;
   line-height: 34px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  @media (max-width: $mobile-width) {
+    margin-bottom: 37px;
+  }
+}
+
+.article__article--big h3 {
+  @media (max-width: $mobile-width) {
+    margin-top: 12px;
+    margin-bottom: 40px;
+  }
 }
 
 .article__article a {
@@ -114,6 +136,10 @@
   height: 1px;
   background-color: $brown-light;
   position: absolute;
-  bottom: 1px;
+  bottom: -5px;
   left: 0px;
+}
+
+.article__article--big a {
+  margin-bottom: 70px;
 }

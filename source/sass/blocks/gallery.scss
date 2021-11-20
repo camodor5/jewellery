@@ -1,8 +1,14 @@
 .gallery {
   padding-bottom: 132px;
 
+  @media (max-width: $tablet-width) {
+    padding-bottom: 80px;
+
+  }
+
   @media (max-width: $mobile-width) {
     padding-bottom: 71px;
+
   }
 }
 
@@ -12,15 +18,22 @@
   text-align: center;
   font-size: 34px;
   line-height: 44px;
+  margin: 0;
 }
 
 .gallery a {
   width: 74px;
-  margin: 35px auto 68px;
+  margin: 32px auto 65px;
   display: block;
   position: relative;
   font-size: 16px;
   line-height: 21px;
+  @media (max-width: $tablet-width) {
+    margin-top: 20px;
+  }
+  @media (max-width: $mobile-width) {
+    margin-bottom: 50px;
+  }
 }
 
 .gallery a::before {
@@ -30,7 +43,7 @@
   height: 1px;
   background-color: $brown-light;
   position: absolute;
-  bottom: -4px;
+  bottom: -6px;
   left: 0px;
 }
 

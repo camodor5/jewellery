@@ -9,7 +9,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding: 60px 15px 40px;
+    padding: 57px 15px 40px;
   }
 }
 
@@ -71,6 +71,10 @@
   line-height: 34px;
   margin-top: -7px;
   margin-bottom: 10px;
+
+  @media (max-width: $mobile-width) {
+    line-height: 44px;
+  }
 }
 
 .footer__form p {

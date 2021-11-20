@@ -112,6 +112,17 @@ const swiper = new Swiper('.swiper', {
   },
 */
 //menu
+const loginSubmit = document.querySelector('.login__button');
+if(loginSubmit) {
+  loginSubmit.addEventListener('click', () => {
+    const inputPassword= document.querySelector('.login__password');
+    localStorage.setItem('password', inputPassword.value);
+    const inputEmail= document.querySelector('.login__email');
+    localStorage.setItem("email", inputEmail.value);
+  })
+}
+
+
 
 const nav = document.querySelector('.nav');
 const header = document.querySelector('.header');
@@ -158,49 +169,54 @@ toggler.addEventListener('click', () => {
 // questions
 const questions = document.querySelectorAll('.questions__text');
 
+if (questions) {
+  questions.forEach((item) => item.addEventListener('click', () => {
+    const parent = item.parentNode;
+    const content = parent.querySelector('.questions__answer');
+    const trigger = parent.querySelector('.questions__icon');
 
-questions.forEach((item) => item.addEventListener('click', () => {
-  const parent = item.parentNode;
-  const content = parent.querySelector('.questions__answer');
-  const trigger = parent.querySelector('.questions__icon');
+    if (trigger.classList.contains('questions__icon--closed')) {
+      trigger.classList.remove('questions__icon--closed');
+      content.classList.remove('questions__answer--closed');
+      trigger.classList.add('questions__icon--opened');
+      content.classList.add('questions__answer--opened');
+    } else {
+      trigger.classList.add('questions__icon--closed');
+      content.classList.add('questions__answer--closed');
+      trigger.classList.remove('questions__icon--opened');
+      content.classList.remove('questions__answer--opened');
+    }
 
-  if (trigger.classList.contains('questions__icon--closed')) {
-    trigger.classList.remove('questions__icon--closed');
-    content.classList.remove('questions__answer--closed');
-    trigger.classList.add('questions__icon--opened');
-    content.classList.add('questions__answer--opened');
-  } else {
-    trigger.classList.add('questions__icon--closed');
-    content.classList.add('questions__answer--closed');
-    trigger.classList.remove('questions__icon--opened');
-    content.classList.remove('questions__answer--opened');
-  }
+  }));
+}
 
-}));
 
 //filters
 
 const filters = document.querySelectorAll('.filter__title');
 
+if (filters) {
+  filters.forEach((item) => item.addEventListener('click', () => {
+    const parent = item.parentNode;
+    const content = parent.querySelector('.filter__check-wrapper');
+    const trigger = parent.querySelector('.filter__icon');
 
-filters.forEach((item) => item.addEventListener('click', () => {
-  const parent = item.parentNode;
-  const content = parent.querySelector('.filter__check-wrapper');
-  const trigger = parent.querySelector('.filter__icon');
+    if (trigger.classList.contains('filter__icon--closed')) {
+      trigger.classList.remove('filter__icon--closed');
+      content.classList.remove('filter__check-wrapper--closed');
+      trigger.classList.add('filter__icon--opened');
+      content.classList.add('.filter__check-wrapper--opened');
+    } else {
+      trigger.classList.add('filter__icon--closed');
+      content.classList.add('filter__check-wrapper--closed');
+      trigger.classList.remove('filter__icon--opened');
+      content.classList.remove('filter__check-wrapper--opened');
+    }
 
-  if (trigger.classList.contains('filter__icon--closed')) {
-    trigger.classList.remove('filter__icon--closed');
-    content.classList.remove('filter__check-wrapper--closed');
-    trigger.classList.add('filter__icon--opened');
-    content.classList.add('.filter__check-wrapper--opened');
-  } else {
-    trigger.classList.add('filter__icon--closed');
-    content.classList.add('filter__check-wrapper--closed');
-    trigger.classList.remove('filter__icon--opened');
-    content.classList.remove('filter__check-wrapper--opened');
-  }
+  }));
 
-}));
+}
+
 
 
 //popup
@@ -210,103 +226,25 @@ const filterButtonClose = document.querySelector('.filter__close');
 const footer = document.querySelector('.footer');
 const catalogSlider = document.querySelector('.catalog__slider');
 const filterWrapper = document.querySelector('.filter__wrapper');
-const intro = document.querySelector('.intro--catalog');
+const intro = document.querySelector('.intro');
 
 
-filterButton.addEventListener ('click', () => {
+if(filterButton) {
+  filterButton.addEventListener ('click', () => {
 
+    footer.classList.add('footer--popup-opened');
+    catalogSlider.classList.add('catalog__slider--popup-opened');
+    header.classList.add('header--popup-opened');
+    filterWrapper.classList.add('filter__wrapper--popup-opened');
+    intro.classList.add('intro--popup-opened');
 
-  footer.classList.add('footer--popup-opened');
-  catalogSlider.classList.add('catalog__slider--popup-opened');
-  header.classList.add('header--popup-opened');
-  filterWrapper.classList.add('filter__wrapper--popup-opened');
-  intro.classList.add('intro--popup-opened');
-
-})
-
-
-
-filterButtonClose.addEventListener ('click', () => {
-
-
-  if (footer.classList.contains('footer--popup-opened')) {
-    footer.classList.remove('footer--popup-opened');
-  }
-  if (catalogSlider.classList.contains('catalog__slider--popup-opened')) {
-    catalogSlider.classList.remove('catalog__slider--popup-opened');
-  }
-  if (header.classList.contains('header--popup-opened')) {
-    header.classList.remove('header--popup-opened');
-  }
-  if (filterWrapper.classList.contains('filter__wrapper--popup-opened')) {
-    filterWrapper.classList.remove('filter__wrapper--popup-opened');
-  }
-  if (intro.classList.contains('intro--popup-opened')) {
-    intro.classList.remove('intro--popup-opened');
-  }
-})
-
-//popup login
-
-const loginButton = document.querySelector('.nav__login');
-const login = document.querySelector('.login');
-const main = document.querySelector('.page__main');
-const overlay = document.querySelector('.login__overlay');
-const loginClose = document.querySelector('.login__close');
-
-
-loginButton.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  header.classList.add('header--popup-opened');
-  footer.classList.add('footer--popup-opened');
-  main.classList.add('page__main--popup-opened');
-  overlay.classList.add('login__overlay--popup-opened');
-  login.classList.add('login--popup-opened');
-  login.classList.remove('login--js');
-  var closeTriggers = [loginClose, overlay];
-  closeTriggers.forEach((item) => {
-    item.addEventListener('click', () => {
-      header.classList.remove('header--popup-opened');
-      footer.classList.remove('footer--popup-opened');
-      main.classList.remove('page__main--popup-opened');
-      overlay.classList.remove('login__overlay--popup-opened');
-      login.classList.remove('login--popup-opened');
-      login.classList.add('login--js');
-    })
   })
-  document.addEventListener('keydown', (evt) => {
-    if (evt.key==='Escape') {
-      header.classList.remove('header--popup-opened');
-      footer.classList.remove('footer--popup-opened');
-      main.classList.remove('page__main--popup-opened');
-      overlay.classList.remove('login__overlay--popup-opened');
-      login.classList.remove('login--popup-opened');
-      login.classList.add('login--js');
-    }
-  })
-});
+}
 
-window.addEventListener('resize', (event) => {
-  if( document.documentElement.clientWidth < 1024 ) {
-    nav.classList.add('nav--menu-disabled');
-    toggler.classList.add('header__toggle--menu-disabled');
-    cart.classList.add('header__cart--menu-disabled');
-    header.classList.add('header--menu-disabled');
-    logo.classList.add('header__logo--menu-disabled')
-  } else {
-    if (nav.classList.contains('nav--menu-disabled')) {
-      nav.classList.remove('nav--menu-disabled');
-    }
 
-    if (toggler.classList.contains('header__toggle--menu-disabled')) {
-      toggler.classList.remove('header__toggle--menu-disabled');
-    }
-    if (cart.classList.contains('header__cart--menu-disabled')) {
-      cart.classList.remove('header__cart--menu-disabled');
-    }
-    if (logo.classList.contains('header__logo--menu-disabled')) {
-      logo.classList.remove('header__logo--menu-disabled');
-    }
+if (filterButtonClose) {
+  filterButtonClose.addEventListener ('click', () => {
+
 
     if (footer.classList.contains('footer--popup-opened')) {
       footer.classList.remove('footer--popup-opened');
@@ -321,7 +259,101 @@ window.addEventListener('resize', (event) => {
       filterWrapper.classList.remove('filter__wrapper--popup-opened');
     }
     if (intro.classList.contains('intro--popup-opened')) {
-      intro.classList.remove('intro--popup-opened');;
+      intro.classList.remove('intro--popup-opened');
     }
-  }
-})
+  })
+}
+
+
+
+
+//popup login
+
+const loginButton = document.querySelector('.nav__login');
+const login = document.querySelector('.login');
+const main = document.querySelector('.page__main');
+const overlay = document.querySelector('.login__overlay');
+const loginClose = document.querySelector('.login__close');
+
+
+if (loginButton) {
+  loginButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    header.classList.add('header--popup-opened');
+    footer.classList.add('footer--popup-opened');
+    main.classList.add('page__main--popup-opened');
+    overlay.classList.add('login__overlay--popup-opened');
+    login.classList.add('login--popup-opened');
+    login.classList.remove('login--js');
+    var closeTriggers = [loginClose, overlay];
+    closeTriggers.forEach((item) => {
+      item.addEventListener('click', () => {
+        header.classList.remove('header--popup-opened');
+        footer.classList.remove('footer--popup-opened');
+        main.classList.remove('page__main--popup-opened');
+        overlay.classList.remove('login__overlay--popup-opened');
+        login.classList.remove('login--popup-opened');
+        login.classList.add('login--js');
+      })
+    })
+    document.addEventListener('keydown', (evt) => {
+      if (evt.key==='Escape') {
+        header.classList.remove('header--popup-opened');
+        footer.classList.remove('footer--popup-opened');
+        main.classList.remove('page__main--popup-opened');
+        overlay.classList.remove('login__overlay--popup-opened');
+        login.classList.remove('login--popup-opened');
+        login.classList.add('login--js');
+      }
+    })
+  });
+
+  window.addEventListener('resize', (event) => {
+    if( document.documentElement.clientWidth < 1024 ) {
+      nav.classList.add('nav--menu-disabled');
+      toggler.classList.add('header__toggle--menu-disabled');
+      cart.classList.add('header__cart--menu-disabled');
+      header.classList.add('header--menu-disabled');
+      logo.classList.add('header__logo--menu-disabled')
+    } else {
+      if (nav.classList.contains('nav--menu-disabled')) {
+        nav.classList.remove('nav--menu-disabled');
+      }
+
+      if (toggler.classList.contains('header__toggle--menu-disabled')) {
+        toggler.classList.remove('header__toggle--menu-disabled');
+      }
+      if (cart.classList.contains('header__cart--menu-disabled')) {
+        cart.classList.remove('header__cart--menu-disabled');
+      }
+      if (logo.classList.contains('header__logo--menu-disabled')) {
+        logo.classList.remove('header__logo--menu-disabled');
+      }
+
+      if (footer.classList.contains('footer--popup-opened')) {
+        footer.classList.remove('footer--popup-opened');
+      }
+      if(catalogSlider) {
+        if (catalogSlider.classList.contains('catalog__slider--popup-opened')) {
+          catalogSlider.classList.remove('catalog__slider--popup-opened');
+        }
+      }
+
+      if (header.classList.contains('header--popup-opened')) {
+        header.classList.remove('header--popup-opened');
+      }
+
+      if(filterWrapper) {
+        if (filterWrapper.classList.contains('filter__wrapper--popup-opened')) {
+          filterWrapper.classList.remove('filter__wrapper--popup-opened');
+        }
+      }
+
+      if (intro.classList.contains('intro--popup-opened')) {
+        intro.classList.remove('intro--popup-opened');;
+      }
+    }
+  })
+
+}
+

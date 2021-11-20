@@ -1,14 +1,20 @@
 .intro {
-  padding-top: 195px;
-  padding-bottom: 194px;
+  padding-top: 185px;
+  padding-bottom: 180px;
   text-align: center;
   background-color: $brown;
   background-image: url("../../img/intro.webp");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   position: relative;
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image: url("../../img/intro@2x.webp");
+  }
+
+  @media(max-width: $mobile-width) {
+    padding-top: 188px;
+    padding-bottom: 186px;
   }
 }
 
@@ -63,15 +69,18 @@
   color: $white;
   font-size: 38px;
   line-height: 49px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.15em;
   margin: 0;
   position: relative;
   z-index: 2;
+  @media(max-width: $mobile-width) {
+    letter-spacing: 0;
+  }
 }
 
 .intro p {
   margin-bottom: 0;
-  margin-top: 20px;
+  margin-top: 0px;
   font-style: italic;
   font-family: "Cormorant Garamond", Arial, sans-serif;
   color: $white;
@@ -83,6 +92,9 @@
   @media (max-width: $mobile-width) {
     padding-left: 37px;
     padding-right: 37px;
+    font-size: 34px;
+    line-height: 44px;
+    margin-top: -5px;
   }
 
 }
