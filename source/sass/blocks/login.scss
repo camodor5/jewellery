@@ -128,11 +128,11 @@
   display: none;
 }
 
-.login__overlay {
+.login-overlay {
   display: none;
 }
 
-.login__overlay--popup-opened {
+.login-overlay--popup-opened {
   display: block;
   min-height: 100vh;
   min-width: 100vw;

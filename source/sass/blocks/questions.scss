@@ -11,7 +11,7 @@
 }
 
 .questions h2 {
-  font-family: "Cormorant Garamond", Arial sans-serif;
+  font-family: "Cormorant Garamond", "Helvetica", sans-serif;
   margin-top: 0;
   margin-bottom: 49px;
   text-align: center;
@@ -121,11 +121,16 @@
 }
 
 .questions__item--deliver, .questions__item--payment, .questions__item--return {
-  padding-bottom: 20px;
-  padding-top: 17px;
+  @media (max-width: $mobile-width) {
+    padding-bottom: 20px;
+    padding-top: 17px;
+  }
+
 }
 
 .questions__item--deliver h3, .questions__item--payment h3, .questions__item--return h3 {
-  padding-right: 0;
-}
 
+  @media (max-width: $mobile-width) {
+    padding-right: 0;
+  }
+}

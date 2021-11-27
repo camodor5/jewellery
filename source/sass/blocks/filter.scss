@@ -153,6 +153,10 @@
   }
 }
 
+.filter__button--disabled {
+  display: none;
+}
+
 .filter__button--submit:hover {
   background-color: $light-grey;
   color: $black;

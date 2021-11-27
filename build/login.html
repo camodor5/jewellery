@@ -5,11 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="preload" href="fonts/CormorantGaramond-Bold.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/CormorantGaramond-SemiBold.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/CormorantGaramond-Italic.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/CormorantGaramond-Medium.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/CormorantGaramond-Regular.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/Poppins-Bold.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/Poppins-SemiBold.woff2" as="font" crossorigin="">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page">
   <header>
+    <h1 class="visually-hidden">Login page</h1>
     <nav>
       <a href="main.html" class="header__logo">
 
@@ -21,13 +30,15 @@
 
   <main>
     <section class="login">
-      <button class="login__close"></button>
+      <button type="button" class="login__close"></button>
       <div class="login__header"></div>
       <h2>Login</h2>
       <div class="login__form">
-        <form action="#">
-          <input class="login__email" type="text" placeholder="Your E-mail">
-          <input class="login__password" type="text" placeholder="Password">
+        <form action="https://echo.htmlacademy.ru/" method="get">
+          <label for="login-email" class="visually-hidden"></label>
+          <input id="login-email" type="email" class="login__email" placeholder="Your E-mail">
+          <label for="login-password" class="visually-hidden"></label>
+          <input id="login-password" type="password" class="login__password" placeholder="Password">
           <span class="login__forgot-password">Forgot your password?</span>
           <button class="login__button" type="submit">Log In</button>
           <span class="login__sign-up-span">Don't have an account?<a class="login__sign-up" href="#">Sign up</a></span>

@@ -32,7 +32,7 @@
   }
 }
 
-.intro--catalog .intro__title--catalog {
+.intro--catalog .intro__title {
   font-size: 34px;
   line-height: 44px;
   letter-spacing: 0;
@@ -65,7 +65,7 @@
 
 .intro h2 {
   text-transform: uppercase;
-  font-family: "Cormorant Garamond", Arial, sans-serif;
+  font-family: "Cormorant Garamond", "Helvetica", sans-serif;
   color: $white;
   font-size: 38px;
   line-height: 49px;
@@ -82,7 +82,7 @@
   margin-bottom: 0;
   margin-top: 0px;
   font-style: italic;
-  font-family: "Cormorant Garamond", Arial, sans-serif;
+  font-family: "Cormorant Garamond", "Helvetica", sans-serif;
   color: $white;
   font-size: 38px;
   line-height: 49px;
@@ -98,4 +98,3 @@
   }
 
 }
-
