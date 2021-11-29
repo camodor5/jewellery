@@ -75,7 +75,6 @@
   position: relative;
   border-bottom: 1px solid $brown;
   padding-left: 40px;
-  padding-right: 400px;
   padding-top: 42px;
   padding-bottom: 43px;
 
@@ -96,6 +95,7 @@
   font-weight: 400;
   padding-left: 7px;
   margin-top: 7px;
+  padding-right: 400px;
 
   @media (max-width: $tablet-width) {
     margin-top: 25px;

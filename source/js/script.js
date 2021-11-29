@@ -1,5 +1,6 @@
 'use strict';
 
+(function () {
 // Slider
 const swiperContainer = document.querySelector('.swiper');
 
@@ -296,3 +297,4 @@ if (loginButton) {
     }
   })
 }
+})();
