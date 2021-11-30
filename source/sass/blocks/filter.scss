@@ -15,9 +15,7 @@
   }
 }
 
-.filter__wrapper {
-
-
+.filter-wrapper {
   @media (max-width: $tablet-width) {
     top: 0;
     left: 0;
@@ -30,10 +28,6 @@
     background-color: $white;
     min-height: 100vh;
     display: none;
-  }
-
-  @media (max-width: $mobile-width) {
-
   }
 }
 

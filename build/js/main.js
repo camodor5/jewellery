@@ -169,7 +169,7 @@ const filterButton = document.querySelector('.catalog__button');
 const filterButtonClose = document.querySelector('.filter__close');
 const footer = document.querySelector('.footer');
 const catalogSlider = document.querySelector('.catalog__slider');
-const filterWrapper = document.querySelector('.filter__wrapper');
+const filterWrapper = document.querySelector('.filter-wrapper');
 const intro = document.querySelector('.intro');
 
 if(filterButton) {
@@ -178,7 +178,7 @@ if(filterButton) {
     footer.classList.add('footer--popup-opened');
     catalogSlider.classList.add('catalog__slider--popup-opened');
     header.classList.add('header--popup-opened');
-    filterWrapper.classList.add('filter__wrapper--popup-opened');
+    filterWrapper.classList.add('filter-wrapper--popup-opened');
     intro.classList.add('intro--popup-opened');
     filterButton.classList.add('filter__button--disabled')
 
@@ -198,8 +198,8 @@ if (filterButtonClose) {
     if (header.classList.contains('header--popup-opened')) {
       header.classList.remove('header--popup-opened');
     }
-    if (filterWrapper.classList.contains('filter__wrapper--popup-opened')) {
-      filterWrapper.classList.remove('filter__wrapper--popup-opened');
+    if (filterWrapper.classList.contains('filter-wrapper--popup-opened')) {
+      filterWrapper.classList.remove('filter-wrapper--popup-opened');
     }
     if (intro.classList.contains('intro--popup-opened')) {
       intro.classList.remove('intro--popup-opened');
@@ -286,8 +286,8 @@ if (loginButton) {
       }
 
       if(filterWrapper) {
-        if (filterWrapper.classList.contains('filter__wrapper--popup-opened')) {
-          filterWrapper.classList.remove('filter__wrapper--popup-opened');
+        if (filterWrapper.classList.contains('filter-wrapper--popup-opened')) {
+          filterWrapper.classList.remove('filter-wrapper--popup-opened');
         }
       }
 

@@ -51,6 +51,7 @@
           <svg width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite_auto.svg#icon-search"></use>
           </svg>
+          <span class="visually-hidden">Search</span>
         </label>
         <input type="text" id="search" placeholder="Type here to search">
       </div>
@@ -431,14 +432,16 @@
 
   <footer class="page__footer footer">
     <div class="footer__wrapper">
-      <form class="footer__form">
+      <form action="https://echo.htmlacademy.ru/" method="get" class="footer__form">
         <h2>The good stuff in your inbox</h2>
         <p>News and updates from CH. No spam, we promise.</p>
         <label class="visually-hidden" for="footer-email"></label>
         <input type="email" id="footer-email" placeholder="Your email">
         <button type="submit">
           Sign up
-          <svg width="30" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 5.5h29m0 0L23.514 1M29 5.5L23.514 10" stroke="currentColor"/></svg>
+          <svg width="30" height="11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow-right"></use>
+          </svg>
         </button>
       </form>
       <div class="footer__links">
@@ -498,9 +501,9 @@
     <div class="login__form">
       <form action="https://echo.htmlacademy.ru/" method="get">
         <label for="login-email" class="visually-hidden"></label>
-        <input id="login-email" type="email" class="login__email" type="text" placeholder="Your E-mail">
+        <input id="login-email" type="email" class="login__email" placeholder="Your E-mail">
         <label for="login-password" class="visually-hidden"></label>
-        <input id="login-password" type="password" class="login__password" type="text" placeholder="Password">
+        <input id="login-password" type="password" class="login__password" placeholder="Password">
         <span class="login__forgot-password">Forgot your password?</span>
         <button class="login__button" type="submit">Log In</button>
         <span class="login__sign-up-span">Don't have an account?<a class="login__sign-up" href="#">Sign up</a></span>
@@ -508,6 +511,6 @@
     </div>
   </section>
   <div class="login-overlay"></div>
-<script src="js/script.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
