@@ -50,13 +50,16 @@
   height: 1px;
   background-color: $brown-light;
   position: absolute;
-  bottom: -3px;
+  bottom: 1px;
   left: 3px;
+  @media (max-width: $tablet-width) {
+    bottom: -3px;
+  }
 }
 
 .new__list {
   list-style: none;
-  margin: 105px auto;
+  margin: 102px auto;
   margin-bottom: 50px;
   max-width: $content;
   display: flex;

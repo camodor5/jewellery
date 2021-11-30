@@ -13,6 +13,15 @@
   }
 
   @media(max-width: $mobile-width) {
+    background-image: url("../../img/intro-tablet.webp");
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url("../../img/intro-tablet@2x.webp");
+    }
+  }
+
+  @media(max-width: $mobile-width) {
+    background-size: auto;
+    background-position: center;
     padding-top: 188px;
     padding-bottom: 186px;
   }

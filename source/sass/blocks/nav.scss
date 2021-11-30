@@ -63,8 +63,7 @@
 .nav__search {
   width: 169px;
   padding-left: 29px;
-  padding-top: 43px;
-  padding-bottom: 52px;
+  padding-top: 46px;
   position: absolute;
   top: -115px;
   left: 20px;
@@ -86,24 +85,15 @@
   height: 14px;
   position: absolute;
   left: 0px;
-  top: 45px;
+  top: 49px;
 
   @media (max-width: $tablet-width) {
     top: 12px;
     left: 12px;
     width: 16px;
     height: 16px;
+    color: $white;
   }
-}
-
-.nav__search svg {
-
-  @media (max-width: $tablet-width) {
-    path {
-      fill: $white;
-    }
-  }
-
 }
 
 .nav__search input {

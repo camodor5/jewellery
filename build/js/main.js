@@ -2,10 +2,10 @@
 
 (function () {
 // Slider
-const swiperContainer = document.querySelector('.swiper');
+var swiperContainer = document.querySelector('.swiper');
 
 if (swiperContainer) {
-  const swiper = new Swiper('.swiper', {
+  var swiper = new Swiper('.swiper', {
     spaceBetween: 30,
     slidesPerGroup: 2,
     slidesPerView: 2,
@@ -61,21 +61,21 @@ if (swiperContainer) {
 
 
 //menu
-const loginSubmit = document.querySelector('.login__button');
+var loginSubmit = document.querySelector('.login__button');
 if(loginSubmit) {
   loginSubmit.addEventListener('click', () => {
-    const inputPassword= document.querySelector('.login__password');
+    var inputPassword= document.querySelector('.login__password');
     localStorage.setItem('password', inputPassword.value);
-    const inputEmail= document.querySelector('.login__email');
+    var inputEmail= document.querySelector('.login__email');
     localStorage.setItem("email", inputEmail.value);
   })
 }
 
-const nav = document.querySelector('.nav');
-const header = document.querySelector('.header');
-const cart = document.querySelector('.header__cart');
-const toggler = document.querySelector('.header__toggle');
-const logo = document.querySelector('.header__logo');
+var nav = document.querySelector('.nav');
+var header = document.querySelector('.header');
+var cart = document.querySelector('.header__cart');
+var toggler = document.querySelector('.header__toggle');
+var logo = document.querySelector('.header__logo');
 
 if( document.documentElement.clientWidth < 1024 ) {
   nav.classList.add('nav--menu-disabled');
@@ -114,13 +114,13 @@ toggler.addEventListener('click', () => {
 })
 
 // questions
-const questions = document.querySelectorAll('.questions__text');
+var questions = document.querySelectorAll('.questions__text');
 
 if (questions) {
   questions.forEach((item) => item.addEventListener('click', () => {
-    const parent = item.parentNode;
-    const content = parent.querySelector('.questions__answer');
-    const trigger = parent.querySelector('.questions__icon');
+    var parent = item.parentNode;
+    var content = parent.querySelector('.questions__answer');
+    var trigger = parent.querySelector('.questions__icon');
 
     if (trigger.classList.contains('questions__icon--closed')) {
       trigger.classList.remove('questions__icon--closed');
@@ -139,13 +139,13 @@ if (questions) {
 
 //filters
 
-const filters = document.querySelectorAll('.filter__title');
+var filters = document.querySelectorAll('.filter__title');
 
 if (filters) {
   filters.forEach((item) => item.addEventListener('click', () => {
-    const parent = item.parentNode;
-    const content = parent.querySelector('.filter__check-wrapper');
-    const trigger = parent.querySelector('.filter__icon');
+    var parent = item.parentNode;
+    var content = parent.querySelector('.filter__check-wrapper');
+    var trigger = parent.querySelector('.filter__icon');
 
     if (trigger.classList.contains('filter__icon--closed')) {
       trigger.classList.remove('filter__icon--closed');
@@ -165,12 +165,12 @@ if (filters) {
 
 //popup filter
 
-const filterButton = document.querySelector('.catalog__button');
-const filterButtonClose = document.querySelector('.filter__close');
-const footer = document.querySelector('.footer');
-const catalogSlider = document.querySelector('.catalog__slider');
-const filterWrapper = document.querySelector('.filter-wrapper');
-const intro = document.querySelector('.intro');
+var filterButton = document.querySelector('.catalog__button');
+var filterButtonClose = document.querySelector('.filter__close');
+var footer = document.querySelector('.footer');
+var catalogSlider = document.querySelector('.catalog__slider');
+var filterWrapper = document.querySelector('.filterwrapper');
+var intro = document.querySelector('.intro');
 
 if(filterButton) {
   filterButton.addEventListener ('click', () => {
@@ -178,7 +178,7 @@ if(filterButton) {
     footer.classList.add('footer--popup-opened');
     catalogSlider.classList.add('catalog__slider--popup-opened');
     header.classList.add('header--popup-opened');
-    filterWrapper.classList.add('filter-wrapper--popup-opened');
+    filterWrapper.classList.add('filterwrapper--popup-opened');
     intro.classList.add('intro--popup-opened');
     filterButton.classList.add('filter__button--disabled')
 
@@ -198,8 +198,8 @@ if (filterButtonClose) {
     if (header.classList.contains('header--popup-opened')) {
       header.classList.remove('header--popup-opened');
     }
-    if (filterWrapper.classList.contains('filter-wrapper--popup-opened')) {
-      filterWrapper.classList.remove('filter-wrapper--popup-opened');
+    if (filterWrapper.classList.contains('filterwrapper--popup-opened')) {
+      filterWrapper.classList.remove('filterwrapper--popup-opened');
     }
     if (intro.classList.contains('intro--popup-opened')) {
       intro.classList.remove('intro--popup-opened');
@@ -212,11 +212,11 @@ if (filterButtonClose) {
 
 //popup login
 
-const loginButton = document.querySelector('.nav__login');
-const login = document.querySelector('.login');
-const main = document.querySelector('.page__main');
-const overlay = document.querySelector('.login-overlay');
-const loginClose = document.querySelector('.login__close');
+var loginButton = document.querySelector('.nav__login');
+var login = document.querySelector('.login');
+var main = document.querySelector('.page__main');
+var overlay = document.querySelector('.login-overlay');
+var loginClose = document.querySelector('.login__close');
 
 if (loginButton) {
   loginButton.addEventListener('click', (evt) => {
@@ -286,8 +286,8 @@ if (loginButton) {
       }
 
       if(filterWrapper) {
-        if (filterWrapper.classList.contains('filter-wrapper--popup-opened')) {
-          filterWrapper.classList.remove('filter-wrapper--popup-opened');
+        if (filterWrapper.classList.contains('filterwrapper--popup-opened')) {
+          filterWrapper.classList.remove('filterwrapper--popup-opened');
         }
       }
 
